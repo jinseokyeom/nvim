@@ -16,7 +16,7 @@ vim.keymap.set('n', 'k', 'v:count == 0 ? "gk" : "k"', { expr = true, silent = tr
 vim.keymap.set('n', 'j', 'v:count == 0 ? "gj" : "j"', { expr = true, silent = true })
 
 -- Open file explorer
-vim.keymap.set('n', '<leader>fe', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>ex', vim.cmd.Ex)
 
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
