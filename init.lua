@@ -18,6 +18,9 @@ vim.keymap.set('n', 'j', 'v:count == 0 ? "gj" : "j"', { expr = true, silent = tr
 -- Open file explorer
 vim.keymap.set('n', '<leader>ex', vim.cmd.Ex)
 
+-- Enable true colors
+vim.opt.termguicolors = true
+
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -119,6 +122,12 @@ require('lazy').setup({
         direction = 'float',
       }
     end,
+  },
+
+  {
+    -- Show pending keybinds
+    'folke/which-key.nvim',
+    opts = {},
   }
 })
 
