@@ -108,6 +108,17 @@ require('lazy').setup({
     config = function()
       require('ibl').setup()
     end
+  },
+
+  {
+    -- Toggle terminal
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require('toggleterm').setup {
+        open_mapping = '<C-t>',
+        direction = 'float',
+      }
+    end,
   }
 })
 
